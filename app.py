@@ -38,8 +38,8 @@ class InferlessPythonModel:
             # device=0
         )
 
-    def infer(self, prompt):
-        pipeline_output = self.generator(prompt, do_sample=True, min_length=20)
+    def infer(self, inputs):
+        pipeline_output = self.generator(inputs['prompt'], do_sample=True, min_length=20)
         generated_txt = pipeline_output[0]["generated_text"]
         return generated_txt
 
