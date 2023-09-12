@@ -1,5 +1,5 @@
 # S3-model-import
-In this template we will have a look as to how you can use your model files stored in S3 to import the model on Inferless.
+In this template we will have a look as to how you can use your model files stored in S3 to import a model on Inferless.
 
 The model used as a reference in this template is a gpt-neo-125m which is a text generation model.
 
