@@ -65,8 +65,8 @@ The following is a sample Input and Output JSON for this model which you can use
 }
 ```
 
-### Set the Enviornment Variables 
-In the configure model step, opne up the Advanced Configuration section. Scroll down to the enviornment variables section and start adding your s3 credentials one by one. You can access all of the enviornment variables you set here inside the code using `os.environ.get`.
+### Set the Environment Variables 
+In the configure model step, open up the Advanced Configuration section. Scroll down to the environment variables section and start adding your s3 credentials one by one. All of the environment variables you set here can be accessed in your code using `os.environ.get`.
 
 Finish the model import.
 
