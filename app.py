@@ -35,7 +35,7 @@ class InferlessPythonModel:
             "text-generation",
             model="model",
             tokenizer="model",
-            # device=0
+            device_map="cuda"
         )
 
     def infer(self, inputs):
