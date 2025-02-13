@@ -23,12 +23,12 @@ class InferlessPythonModel:
         )
 
         objects = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=FOLDER_NAME)
-        # Download everything from the folder
+        os.makedirs('model', exist_ok=True)
+        
         for obj in objects['Contents']:
             key = obj['Key']
-            file_name = os.path.join('model', key.replace(FOLDER_NAME + '/', ''))
-
-            os.makedirs(os.path.dirname(file_name), exist_ok=True)
+            base_filename = os.path.basename(key)
+            file_name = os.path.join('model', base_filename)
             s3.download_file(BUCKET_NAME, key, file_name)
 
         self.generator = pipeline(
