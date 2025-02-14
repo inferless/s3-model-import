@@ -27,42 +27,6 @@ Enter all the required details to Import your model. Refer [this link](https://d
 
 The following is a sample Input and Output JSON for this model which you can use while importing this model on Inferless.
 
-### Input
-```json
- {
-  "inputs": [
-    {
-      "data": [
-        "There is a fine house in the forest"
-      ],
-      "name": "prompt",
-      "shape": [
-        1
-      ],
-      "datatype": "BYTES"
-    }
-  ]
-}
-```
-
-### Output
-```json
-{
-  "outputs": [
-    {
-      "name": "generated_text",
-      "datatype": "BYTES",
-      "shape": [
-        1
-      ],
-      "data": [
-        "Blank"
-      ]
-    }
-  ]
-}
-```
-
 ### Set the Environment Variables 
 In the configure model step, open up the Advanced Configuration section. Scroll down to the environment variables section and start adding your s3 credentials one by one. All of the environment variables you set here can be accessed in your code using `os.environ.get`.
 
